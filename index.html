@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parinya Chiayarot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f8fb; --surface:#ffffff; --ink:#10253a; --muted:#53697d;
+  --line:#d9e6ee; --accent:#12a8dc; --accent-ink:#06689a; --chip:#e4f4fb;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0b1722; --surface:#12212f; --ink:#e8f2f9; --muted:#9db3c4;
+    --line:#223647; --accent:#3cc3ee; --accent-ink:#7fd8f5; --chip:#173246;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Sarabun',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  line-height:1.7;font-size:17px;padding:clamp(16px,4vw,48px)}
+h1,h2,h3{font-family:'Prompt','Sarabun',sans-serif;line-height:1.3}
+.wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:300px 1fr;gap:32px;align-items:start}
+
+/* profile panel */
+.profile{position:sticky;top:24px;background:var(--surface);border:1px solid var(--line);
+  border-radius:20px;overflow:hidden}
+.photo{background:var(--accent);padding:28px 0 0;display:flex;justify-content:center}
+.photo img{width:200px;height:260px;object-fit:cover;object-position:top;
+  border-radius:100px 100px 0 0;display:block;background:#fff}
+.info{padding:22px 24px 26px}
+.info h1{font-size:1.4rem;font-weight:700}
+.role{color:var(--accent-ink);font-weight:600;margin-top:6px}
+.uni{color:var(--muted);font-size:.95rem;margin-top:2px}
+.links{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.links a{display:block;text-align:center;padding:10px 14px;border-radius:10px;font-weight:600;
+  text-decoration:none;border:1.5px solid var(--accent);color:var(--accent-ink)}
+.links a.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.links a:hover{filter:brightness(1.08)}
+a:focus-visible{outline:3px solid var(--accent-ink);outline-offset:2px}
+
+/* content */
+main{display:flex;flex-direction:column;gap:20px}
+section{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px 30px}
+h2{font-size:1.25rem;font-weight:600;margin-bottom:16px;padding-left:14px;border-left:5px solid var(--accent)}
+h3{font-size:1rem;font-weight:600;margin:14px 0 6px;color:var(--muted)}
+h3:first-of-type{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--chip);color:var(--accent-ink);padding:4px 14px;border-radius:99px;font-weight:500;font-size:.95rem}
+.interest{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.interest div{background:var(--chip);border-radius:14px;padding:16px 18px}
+.interest strong{display:block;font-family:'Prompt',sans-serif;font-size:1.05rem}
+.interest span{color:var(--muted);font-size:.95rem}
+.project{border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:16px 20px}
+.project h3{margin:0 0 4px;color:var(--ink);font-size:1.05rem}
+.project p,.muted{color:var(--muted)}
+.edu strong{display:block;font-size:1.05rem}
+footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:28px}
+
+@media (max-width:800px){
+  .wrap{grid-template-columns:1fr}
+  .profile{position:static}
+  .interest{grid-template-columns:1fr}
+  section{padding:22px 20px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <aside class="profile">
+    <div class="photo"><img src="profile.jpg" alt="รูปโปรไฟล์ ปริญญา ไชยรส"></div>
+    <div class="info">
+      <h1>นาย ปริญญา ไชยรส</h1>
+      <p class="role">นักศึกษาชั้นปีที่ 3 สาขาวิทยาการคอมพิวเตอร์</p>
+      <p class="uni">Computer Science Student, Udon Thani Rajabhat University</p>
+      <div class="links">
+        <a class="primary" href="mailto:peempeem5580@gmail.com">ส่งอีเมล</a>
+        <a href="https://github.com/RinyaPim" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <section>
+      <h2>ความสนใจ</h2>
+      <div class="interest">
+        <div><strong>AI</strong><span>ปัญญาประดิษฐ์</span></div>
+        <div><strong>Data Science</strong><span>วิทยาศาสตร์ข้อมูล</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>ทักษะ (Skills)</h2>
+      <h3>Programming Languages</h3>
+      <div class="chips"><span class="chip">Python</span><span class="chip">C</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
+      <h3>Data</h3>
+      <div class="chips"><span class="chip">SQL</span></div>
+      <h3>Tools</h3>
+      <div class="chips"><span class="chip">VS Code</span><span class="chip">Git</span><span class="chip">Google Colab</span></div>
+      <h3>Soft Skills</h3>
+      <div class="chips"><span class="chip">Teamwork</span><span class="chip">Communication</span></div>
+    </section>
+
+    <section>
+      <h2>ผลงานที่ผ่านมา (Project/Portfolio)</h2>
+      <div class="project">
+        <h3>AI ทำนายพฤติกรรมการสมัครสมาชิกของ Netflix</h3>
+        <p>โครงการนี้ใช้ AI เพื่อวิเคราะห์และทำนายพฤติกรรมการสมัครสมาชิก</p>
+      </div>
+    </section>
+
+    <section class="edu">
+      <h2>การศึกษา</h2>
+      <strong>มหาวิทยาลัยราชภัฏอุดรธานี</strong>
+      <p class="muted">คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์ · ชั้นปีที่ 3</p>
+    </section>
+
+    <section>
+      <h2>กิจกรรมและผลงาน</h2>
+      <p class="muted">ไม่มีกิจกรรมหรือผลงานที่โดดเด่นในปัจจุบัน</p>
+    </section>
+  </main>
+</div>
+<footer>© Parinya Chiayarot</footer>
+</body>
+</html>
